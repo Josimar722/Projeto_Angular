@@ -8,27 +8,27 @@
         <div class="col-md-8">
             <div class="form-group">
                 <label for="nome">Nome</label>
-                <input type="text" class="form-control" id="nome" placeholder="Digite seu nome..">
+                <input type="text" class="form-control" id="nome" placeholder="Digite seu nome.." [(ngModel)]='user.nome'>
                 <!--[(ngModel)]='user.nome'  -->
             </div>
             <div class="form-group">
                 <label for="email">E-mail</label>
-                <input type="email" class="form-control" id="email" placeholder="nome@exemplo.com">
+                <input type="email" class="form-control" id="email" placeholder="nome@exemplo.com" [(ngModel)]='user.usuario'>
                 <!-- [(ngModel)]='user.usuario' -->
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Senha</label>
-                <input type="password" class="form-control" id="senha" placeholder="Digite sua senha">
+                <input type="password" class="form-control" id="senha" placeholder="Digite sua senha" (input)='conferirSenha($event)' value='{{senha}}'>
                 <!-- (input)='conferirSenha($event)' value='{{senha}}' -->
             </div>
 
             <div class="form-group">
                 <label for="senhaConf">Confirmar senha</label>
                 <input type="password" class="form-control" id="senhaConf"
-                    placeholder="Digite a confirmação da sua senha..."> <!-- [(ngModel)]='user.senha'-->
+                    placeholder="Digite a confirmação da sua senha..." [(ngModel)]='user.senha'>
             </div>
             <div class="d-flex justifi-content-center">
-                <button type="submit" class="btn btn-outline-success w-25">Cadastrar</button> <!--click='cadastrar()'-->
+                <button type="submit" class="btn btn-outline-success w-25" (click)='cadastrar()'>Cadastrar</button> <!--click='cadastrar()'-->
             </div>
         </div>
     </div>

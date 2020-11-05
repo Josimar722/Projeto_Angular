@@ -18,7 +18,7 @@ export class CadastroComponent implements OnInit {
 
   }
 
-  /*conferirSenha(event: any){
+  conferirSenha(event: any){
     this.senha = event.target.value
 
   }
@@ -33,6 +33,6 @@ export class CadastroComponent implements OnInit {
     } else {
         alert('Suas senhas não conferem')
     }  
-  }*/ 
+  } 
 
 }
